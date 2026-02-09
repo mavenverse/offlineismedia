@@ -226,30 +226,56 @@
         </div>
       </section>
 
-      <!-- SIGNUP -->
-    <div data-tf-live="01KH29QFJVD3QG097VSK0HPSPS"></div><script src="//embed.typeform.com/next/embed.js"></script>
+<!-- SIGNUP -->
+<section id="signup" class="mt-16 md:mt-24">
+  <div class="grid md:grid-cols-2 gap-10 items-start">
+    <div>
+      <h2 class="text-2xl md:text-3xl font-extrabold">Get pilot packages + pricing</h2>
+      <p class="mt-2 text-zinc-300 max-w-xl">
+        If you want to buy offline like media, we’ll show you example inventory sets and package options.
+      </p>
 
-              <p class="text-xs text-zinc-400">No spam. If it’s not a fit, we’ll say so.</p>
-            </form>
-          </div>
+      <div class="mt-6 glass border border-zinc-800 rounded-2xl p-6">
+        <div class="text-sm text-zinc-300">
+          <div class="font-semibold text-zinc-100">This page tests:</div>
+          <div class="mt-1">Narrative = “Offline communities are an undervalued media channel.”</div>
         </div>
-      </section>
+      </div>
 
-      <footer class="mt-20 pt-10 border-t border-zinc-900 text-sm text-zinc-500">
-        <div class="flex items-center justify-between">
-          <div class="lowercase">mavenverse</div>
-          <div>© <span id="year"></span></div>
-        </div>
-      </footer>
-    </main>
+      <p class="mt-6 text-xs text-zinc-400">
+        No spam. If it’s not a fit, we’ll say so.
+      </p>
+    </div>
 
-    <script>
-      // Auto-capture URL + allow variant override via ?v=something
-      const params = new URLSearchParams(window.location.search);
-      const v = params.get("v") || "offline-media";
-      document.getElementById("page_variant").value = v;
-      document.getElementById("page_url").value = window.location.href;
-      document.getElementById("year").textContent = new Date().getFullYear();
-    </script>
-  </body>
+    <div class="glass border border-zinc-800 rounded-2xl p-4">
+      <div
+        data-tf-live="01KH29QFJVD3QG097VSK0HPSPS"
+        data-tf-hidden="variant=offline-media"
+        data-tf-hide-headers
+        data-tf-hide-footer
+        style="width:100%; height:1200px;"
+      ></div>
+    </div>
+  </div>
+</section>
+
+<footer class="mt-20 pt-10 border-t border-zinc-900 text-sm text-zinc-500">
+  <div class="flex items-center justify-between">
+    <div class="lowercase">mavenverse</div>
+    <div>© <span id="year"></span></div>
+  </div>
+</footer>
+
+</main>
+
+<!-- Typeform embed loader (required) -->
+<script src="https://embed.typeform.com/next/embed.js"></script>
+
+<script>
+  // Footer year (guarded so it doesn't throw if you remove the footer)
+  const yearEl = document.getElementById("year");
+  if (yearEl) yearEl.textContent = new Date().getFullYear();
+</script>
+
+</body>
 </html>
